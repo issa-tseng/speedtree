@@ -9,6 +9,9 @@
     "url": "git://github.com/clint-tseng/speedtree.git"
   },
   "keywords": [ "tree", "render", "visualize", "d3", "webgl" ],
+  "scripts": {
+    "test": "node .grunt.js test"
+  },
   "dependencies": {
     "gl-matrix": "~2.0.0",
     "prelude-ls": "~1.0.3"
