@@ -1,4 +1,4 @@
-h1. SpeedTree
+h1. SpeedTree "!https://secure.travis-ci.org/clint-tseng/speedtree.png!":http://travis-ci.org/clint-tseng/speedtree
 
 Please don't sue me over a good joke.
 
@@ -8,7 +8,7 @@ SpeedTree is a tree visualization library which focuses on providing purely func
 
 h2. Model layer
 
-Nodes are simply pieces of data as convention. There is a class simply to provide a simple construction method for the appropriate data structure, but the majority of the model work is done via manipulation functions which return a new instance of a node per node-level modification, and a new instance of a subtree to propagate that new node as necessary.
+Nodes are simply pieces of data as convention. There is a Node class simply to provide a simple construction method for the appropriate data structure, but the majority of the model work is done via manipulation functions which return a new instance of a node per node-level modification, and a new instance of a subtree to propagate that new node as necessary.
 
 Nodes consist of the following data:
 
