@@ -1,0 +1,26 @@
+{
+  "name": "speedtree",
+  "description": "an abstract tree visualization library.",
+  "version": "0.1.0",
+  "author": "Clint Tseng <clint@dontexplain.com>",
+  "homepage": "https://github.com/clint-tseng/speedtree",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/clint-tseng/speedtree.git"
+  },
+  "keywords": [ "tree", "render", "visualize", "d3", "webgl" ],
+  "dependencies": {
+    "gl-matrix": "~2.0.0",
+    "prelude-ls": "~1.0.3"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-livescript": "~0.5.1",
+
+    "grunt-simple-mocha": "~0.4.0",
+    "expect.js": "0.2.0"
+  }
+}
