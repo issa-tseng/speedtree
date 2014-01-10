@@ -1,0 +1,40 @@
+h1. SpeedTree
+
+Please don't sue me over a good joke.
+
+h2. Introduction
+
+SpeedTree is a tree visualization library which focuses on providing purely functional, fast processing and rendering, and in corollary the ability to visualize the tree as it changes over time. It is built as a pair of internally isomorphic layers which can be internally composed to provide the desired behaviour.
+
+h2. Model layer
+
+Nodes are simply pieces of data as convention. There is a class simply to provide a simple construction method for the appropriate data structure, but the majority of the model work is done via manipulation functions which return a new instance of a node per node-level modification, and a new instance of a subtree to propagate that new node as necessary.
+
+Nodes consist of the following data:
+
+* *id*: _required_. This is a globally unique id that is used to track the logical node throughout the lifecycle of the system.
+* *data*: This is an arbitrary Javascript value that the user of SpeedTree can leverage to store node-related data. Mapping the data attribute from one subtree to another also provides a simple way of processing the tree for display.
+* *parent*: Tracks the parent of the node. Managed internally, but available externally.
+* *children*: An id-to-node mapping of the children of the node. Note that ordering is not guaranteed or preserved with this structure; for render, logical ordering is determined via a supplemental function rather than by direct structural manipulation.
+
+The underlying methodology behind the implementation is to (ab)use Javascript's prototypal inheritance to provide a fast, memory-efficient way of layering changes of data. The only case in which prototypal inheritance is not used is in removing a child from the mapping, as it is not possible to uninherit a property from a prototype.
+
+h2. Render layer
+
+At the render layer, we are interested in drawing based on a number different things:
+
+* Each node (post-filtering, if relevant):
+** layout position (x, y, z)
+** style (color, opacity)
+* Each text element (mapped per node):
+** layout position (x, y, z) or (angle, r)
+** style (color, size, opacity)
+* Each link (generated per relationship):
+** style (color, opacity)
+
+*(work in progress)*
+
+h2. License
+
+"WTFPL":http://www.wtfpl.net/txt/copying/
+
